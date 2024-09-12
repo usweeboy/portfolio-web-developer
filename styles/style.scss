@@ -1,0 +1,22 @@
+// Base
+@import 
+  './base/reset',
+  './base/fonts',
+  './base/vars',
+  './base/mixins',
+  './base/media',
+  './base/base'
+;
+
+// Blocks
+@import 
+  './blocks/header',
+  './blocks/nav',
+  './blocks/hero',
+  './blocks/technologies',
+  './blocks/portfolio',
+  './blocks/advantages',
+  './blocks/contacts',
+  './blocks/footer',
+  './blocks/modal'
+;

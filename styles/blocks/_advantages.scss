@@ -1,0 +1,126 @@
+.advantages {
+  padding-bottom: 70px;
+  &__title {
+    margin-bottom: 45px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+  &__item {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: var(--border-radius-small);
+    padding: 25px;
+    &-image {
+      width: 80px;
+      height: 80px;
+      background-color: #F5F8FF;
+      @include align-center;
+      justify-content: center;
+      border-radius: 100%;
+      margin-bottom: 24px;
+      & img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    &-title {
+      display: block;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
+    &-description {
+      font-size: 18px;
+      line-height: 30px;
+      color: var(--color-dark-alt);
+    }
+  }
+}
+
+@include desktop {
+  .advantages {
+    &__list {
+      gap: 28px;
+    }
+    &__item {
+      padding: 22px;
+      &-image {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+      }
+      &-title {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 8px;
+      }
+      &-description {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .advantages {
+    padding-bottom: 45px;
+    &__title {
+      margin-bottom: 36px;
+    }
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}
+
+@include phablet {
+  .advantages {
+    padding-bottom: 40px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__list {
+      gap: 25px;
+    }
+    &__item {
+      padding: 20px;
+      &-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 18px;
+      }
+      &-title {
+        font-size: 17px;
+        line-height: 26px;
+        margin-bottom: 8px;
+      }
+      &-description {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .advantages {
+    padding-bottom: 30px;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__list {
+      gap: 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      &-image {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

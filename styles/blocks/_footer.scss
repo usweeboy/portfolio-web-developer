@@ -1,0 +1,197 @@
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  &__form {
+    padding: 50px 0px 45px;
+    border-bottom: 1px solid rgb(229, 229, 229, 0.25);
+    @include align-center;
+    justify-content: space-between;
+    &-label {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    &-input {
+      position: relative;
+      border-bottom: 1px solid var(--color-gray-alt);
+      width: 360px;
+      & button {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        cursor: pointer;
+      }
+      & input {
+        width: 100%;
+        padding: 20px 0px;
+        padding-right: 40px;
+      }
+    }
+  }
+  &__body {
+    padding: 55px 0px 50px;
+    border-bottom: 1px solid rgb(229, 229, 229, 0.25);
+    @include align-center;
+    justify-content: space-between;
+    &-text {
+      color: #bfbfbf;
+    }
+  }
+  &__logo {
+    margin-bottom: 12px;
+  }
+  &__socials {
+    &-list {
+      @include align-center;
+      gap: 12px;
+    }
+    &-link {
+      background-color: #202c4a;
+      border-radius: 100%;
+      width: 65px;
+      height: 65px;
+      @include align-center;
+      justify-content: center;
+      @include hover {
+        background-color: #2c3b62;
+      }
+    }
+  }
+  &__copy {
+    padding: 36px 0px 28px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+@include tablet {
+  .footer {
+    &__form {
+      padding: 40px 0px 35px;
+      &-label {
+        font-size: 21px;
+      }
+      &-input {
+        width: 300px;
+        & button {
+          & svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        & input {
+          padding: 18px 0px;
+          padding-right: 34px;
+          font-size: 16px;
+        }
+      }
+    }
+    &__body {
+      padding: 45px 0px 40px;
+      &-text {
+        font-size: 16px;
+      }
+    }
+    &__logo {
+      margin-bottom: 12px;
+    }
+    &__copy {
+      padding: 30px 0px 20px;
+      font-size: 14px;
+    }
+    &__socials {
+      &-list {
+        gap: 10px;
+      }
+      &-link {
+        width: 50px;
+        height: 50px;
+        & svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
+@include phablet {
+  .footer {
+    &__form {
+      padding: 35px 0px 30px;
+      &-label {
+        font-size: 18px;
+      }
+      &-input {
+        width: 240px;
+        & button {
+          & svg {
+            top: 16px;
+            width: 18px;
+            height: 18px;
+          }
+        }
+        & input {
+          padding: 16px 0px;
+          padding-right: 30px;
+          font-size: 14px;
+        }
+      }
+    }
+    &__logo {
+      margin-bottom: 8px;
+    }
+    &__body {
+      padding: 40px 0px 30px;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      &-text {
+        font-size: 14px;
+      }
+    }
+    &__copy {
+      padding: 24px 0px 18px;
+      font-size: 12px;
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    &__form {
+      padding: 35px 0px 30px;
+      flex-direction: column;
+      gap: 16px;
+      &-input {
+        width: 80%;
+        & input {
+          padding: 14px 0px;
+        }
+      }
+    }
+    &__body {
+      padding: 35px 0px 25px;
+      gap: 14px;
+    }
+    &__logo {
+      margin-bottom: 7px;
+    }
+    &__socials {
+      &-list {
+        gap: 8px;
+      }
+      &-link {
+        width: 45px;
+        height: 45px;
+        & svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    &__copy {
+      padding: 22px 0px 17px;
+    }
+  }
+}

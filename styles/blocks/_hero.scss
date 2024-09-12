@@ -1,0 +1,215 @@
+.hero {
+  padding-top: 70px;
+  &__inner {
+    @include align-center;
+    gap: 80px;
+  }
+  &__tagline {
+    border: 1px solid var(--color-gray);
+    color: var(--color-dark-alt);
+    padding: 12px;
+    border-radius: var(--border-radius-small);
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  &__title {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    & span {
+      color: var(--color-gray);
+    }
+  }
+  &__content {
+    width: 62%;
+    flex-basis: 62%;
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    color: var(--color-dark-alt)
+  }
+  &__actions {
+    @include align-center;
+    gap: 30px;
+  }
+  &__btn {
+    &-secondary {
+      padding: 0px;
+      border: none;
+      @include hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+  &__image {
+    border-radius: var(--border-radius-small);
+    width: 38%;
+    flex-basis: 38%;
+    border-radius: 100%;
+    margin: 0px auto;
+  }
+}
+
+@include desktop {
+  .hero {
+    padding-top: 45px;
+    &__inner {
+      gap: 60px;
+    }
+    &__title {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+    &__content {
+      width: 60%;
+      flex-basis: 60%;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 24px;
+      max-width: 100%;
+    }
+    &__image {
+      width: 40%;
+      flex-basis: 40%;
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    padding-top: 45px;
+    &__tagline {
+      padding: 10px;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+    &__inner {
+      gap: 45px;
+    }
+    &__title {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+    &__content {
+      width: 68%;
+      flex-basis: 68%;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 26px;
+      margin-bottom: 18px;
+      max-width: 550px;
+    }
+    &__image {
+      width: 32%;
+      flex-basis: 32%;
+    }
+    &__actions {
+      gap: 24px;
+    }
+    &__btn {
+      &-secondary {
+        font-size: 14px;
+        & svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include phablet {
+  .hero {
+    &__inner {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+    &__content {
+      width: 100%;
+      flex-basis: 100%;
+    }
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      max-width: 600px;
+      margin: 0px auto;
+      margin-bottom: 20px;
+    }
+    &__actions {
+      justify-content: center;
+    }
+    &__image {
+      width: 55%;
+      flex-basis: 55%;
+    }
+  }
+}
+
+@include mobile {
+  .hero {
+    padding-top: 36px;
+    &__inner {
+      gap: 24px;
+    }
+    &__tagline {
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__subtitle {
+      font-size: 13px;
+      line-height: 25px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    &__actions {
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__btn {
+      &-secondary {
+        font-size: 13px;
+        & svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    &__image {
+      width: 70%;
+      flex-basis: 70%;
+    }
+  }
+}
+
+@include small-mobile {
+  .hero {
+    &__tagline {
+      font-size: 11px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__subtitle {
+      font-size: 12px;
+      line-height: 23px;
+    }
+    &__actions {
+      gap: 20px;
+    }
+  }
+}

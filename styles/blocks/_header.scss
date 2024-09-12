@@ -1,0 +1,161 @@
+.header {
+  padding: 22px 0px;
+  border-bottom: 1px solid var(--color-gray-alt);
+  &__logo {
+    z-index: 999;
+  }
+  &__inner {
+    @include align-center;
+    justify-content: space-between;
+  }
+  &__content {
+    @include align-center;
+    gap: 45px
+  }
+  &__socials {
+    display: none;
+  }
+  &__phone {
+    display: none;
+  }
+  &__btn {
+    padding: 18px 36px;
+    &-icon {
+      display: none;
+    }
+  }
+  &-burger {
+    display: none;
+    position: relative;
+    width: 28px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    z-index: 999;
+    & span {
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      right: 0;
+      background-color: var(--color-dark-alt);
+      border-radius: var(--border-radius);
+      transition: transform var(--transition-duration), opacity var(--transition-duration), -webkit-transform var(--transition-duration);
+    }
+    & span:nth-child(1) {
+      transform: translateY(-8px);
+    }
+    & span:nth-child(3) {
+      transform: translateY(8px);
+    }
+    &.active span:nth-child(1) {
+      transform: translateY(0) rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      transform: translateY(0px) rotate(-45deg);
+    }
+    &.active span:nth-child(3) {
+      opacity: 0;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    padding: 20px 0px;
+    &__content {
+      gap: 25px
+    }
+    &__btn {
+      padding: 14px 30px;
+    }
+  }
+}
+
+@include phablet {
+  .header {
+    padding: 18px 0px;
+    &__content {
+      gap: 24px
+    }
+    &-burger {
+      display: block;
+    }
+    &__socials {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      padding: 22px;
+      &-list {
+        @include align-center;
+        gap: 12px;
+      }
+      &-link {
+        border-radius: 100%;
+        @include align-center;
+        justify-content: center;
+        & svg {
+          width: 42px;
+          height: 42px;
+        }
+      }
+      &__link {
+        color: var(--color-dark);
+      }
+    }
+    &__btn {
+      padding: 13px 29px;
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    padding: 14px 0px;
+    &__btn {
+      padding: 10px 22px;
+      &-text {
+        display: none;
+      }
+      &-icon {
+        display: block;
+      }
+      &-arrow {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    &__content {
+      gap: 16px
+    }
+    &-burger {
+      width: 27px;
+      & span {
+        height: 2px;
+      }
+      & span:nth-child(1) {
+        transform: translateY(-7px);
+      }
+      & span:nth-child(3) {
+        transform: translateY(7px);
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .header {
+    &__socials {
+      padding: 20px;
+      &-list {
+        gap: 10px;
+      }
+      &-link {
+        & svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}

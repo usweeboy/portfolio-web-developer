@@ -1,0 +1,129 @@
+.contacts {
+  padding-top: 50px;
+  padding-bottom: 110px;
+  &__title {
+    visibility: hidden;
+    height: 0px;
+  }
+  &__body {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__headline {
+    font-size: 21px;
+    color: var(--color-gray);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  &__phone {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  &__email {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 42px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    min-width: 800px;
+    &-input {
+      border: 1px solid var(--color-gray);
+      width: 100%;
+      border-radius: var(--border-radius-small);
+      padding: 24px;
+      font-size: 17px;
+    }
+    &-btn {
+      width: 50%;
+    }
+  }
+}
+
+@include tablet {
+  .contacts {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    &__headline {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__phone {
+      font-size: 48px;
+      margin-bottom: 18px;
+    }
+    &__email {
+      font-size: 19px;
+      margin-bottom: 38px;
+    }
+    &__form {
+      min-width: 100%;
+      gap: 18px;
+      &-input {
+        padding: 19px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .contacts {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    &__headline {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    &__phone {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+    &__email {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    &__form {
+      gap: 15px;
+      &-input {
+        padding: 17px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .contacts {
+    padding-top: 25px;
+    padding-bottom: 55px;
+    &__headline {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    &__phone {
+      font-size: 30px;
+      margin-bottom: 11px;
+    }
+    &__email {
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+    &__form {
+      gap: 14px;
+      &-input {
+        padding: 15px;
+        font-size: 12px;
+      }
+      &-btn {
+        width: 70%;
+      }
+    }
+  }
+}
